@@ -10,6 +10,7 @@ public class MainActivityTest {
     public void stringValue() {
         MainActivity mainActivity = new MainActivity();
         String actualValue = mainActivity.stringValue("Hello");
-        assertEquals("Sdsfsduccess", actualValue);
+        String expectedString;
+        assertEquals("Success", actualValue);
     }
 }
