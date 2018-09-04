@@ -11,6 +11,7 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private String string;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("lifecycle", "onCreate invoked activity A");
         Button clickButton = findViewById(R.id.click_for_secondActivity);
         clickButton.setOnClickListener(this);
+        stringValue(string);
     }
 
     @Override
@@ -82,5 +84,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 openActivity();
                 break;
         }
+    }
+
+    public String stringValue(String s)
+    {
+        if (s.equals("Hello"))
+            return "Success";
+        else
+            return "Failure";
     }
 }
